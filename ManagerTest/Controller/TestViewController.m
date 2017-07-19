@@ -12,6 +12,7 @@
 #import "TestModel.h"
 #import "TestFormHead.h"
 #import "TestFormDataCell.h"
+#import "AddDataView.h"
 
 @interface TestViewController ()<UITextFieldDelegate>
 
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) UIButton *selectAllButton;
 @property (nonatomic, strong) UIButton *confirmDelButton;
 @property (nonatomic, strong) NSMutableDictionary *delDic;
+@property (nonatomic, strong) UIButton *addDataButton;
 
 @end
 
@@ -64,6 +66,7 @@
     [self.delView addSubview:self.cancelDelButton];
     [self.delView addSubview:self.selectAllButton];
     [self.delView addSubview:self.confirmDelButton];
+    [self.view addSubview:self.addDataButton];
     [self.searchNameField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(20);
         make.bottom.equalTo(self.tableView.mas_top).offset(-20);
@@ -107,6 +110,12 @@
         make.right.equalTo(self.delView);
     }];
     self.delView.hidden = YES;
+    [self.addDataButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.delView);
+        make.width.equalTo(@80);
+        make.height.equalTo(@30);
+        make.left.equalTo(self.delView.mas_right).offset(50);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -210,6 +219,34 @@
     }
     [self.delDic removeAllObjects];
     [self.tableView reloadData];
+}
+
+- (void)addDataAction {
+    AddDataView *view = [[AddDataView alloc] initView];
+    [view show];
+    WS(weakSelf);
+    __weak typeof(view) weakView = view;
+    [view setAddDataBlock:^(NSString *id,NSString *name,NSString *desc){
+        BOOL isExisting = NO;
+        for (int i=0; i<weakSelf.dataArray.count; i++) {
+            TestModelData *data = weakSelf.dataArray[i];
+            if (data.id == [id integerValue]) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"id已存在" delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                [alert show];
+                isExisting = YES;
+                return;
+            }
+        }
+        if (!isExisting) {
+            TestModelData *addData = [[TestModelData alloc] init];
+            addData.id = [id integerValue];
+            addData.name = name;
+            addData.desc = desc;
+            [weakSelf.dataArray addObject:addData];
+            [weakSelf.tableView reloadData];
+            [weakView hide];
+        }
+    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -383,6 +420,21 @@
         [_confirmDelButton addTarget:self action:@selector(confirmDelAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _confirmDelButton;
+}
+
+- (UIButton *)addDataButton {
+    if (!_addDataButton) {
+        _addDataButton = [[UIButton alloc] init];
+        _addDataButton.backgroundColor = Color(100, 181, 246);
+        [_addDataButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _addDataButton.titleLabel.font = Font(15);
+        [_addDataButton setTitle:@"添加数据" forState:UIControlStateNormal];
+        [_addDataButton.layer setCornerRadius:5.0]; //设置矩形四个圆角半径
+        [_addDataButton.layer setBorderWidth:1.0];
+        [_addDataButton.layer setBorderColor:Color(100, 181, 246).CGColor];//边框颜色
+        [_addDataButton addTarget:self action:@selector(addDataAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addDataButton;
 }
 
 @end

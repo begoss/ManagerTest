@@ -62,6 +62,7 @@
 		9B8DC1BC1F1E138300EBD8D2 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DC1BB1F1E138300EBD8D2 /* TestModel.m */; };
 		9B8DC1BF1F1E14D700EBD8D2 /* TestFormHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DC1BE1F1E14D700EBD8D2 /* TestFormHead.m */; };
 		9B8DC1C21F1E14E900EBD8D2 /* TestFormDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DC1C11F1E14E900EBD8D2 /* TestFormDataCell.m */; };
+		9BE1B0681F1F8A51008965FD /* AddDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1B0671F1F8A51008965FD /* AddDataView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,8 @@
 		9B8DC1BE1F1E14D700EBD8D2 /* TestFormHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFormHead.m; sourceTree = "<group>"; };
 		9B8DC1C01F1E14E900EBD8D2 /* TestFormDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFormDataCell.h; sourceTree = "<group>"; };
 		9B8DC1C11F1E14E900EBD8D2 /* TestFormDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFormDataCell.m; sourceTree = "<group>"; };
+		9BE1B0661F1F8A51008965FD /* AddDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDataView.h; sourceTree = "<group>"; };
+		9BE1B0671F1F8A51008965FD /* AddDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDataView.m; sourceTree = "<group>"; };
 		C628A483164348D6E1F8E1D9 /* libPods-ManagerTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManagerTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -394,6 +397,8 @@
 				9B8DC1BE1F1E14D700EBD8D2 /* TestFormHead.m */,
 				9B8DC1C01F1E14E900EBD8D2 /* TestFormDataCell.h */,
 				9B8DC1C11F1E14E900EBD8D2 /* TestFormDataCell.m */,
+				9BE1B0661F1F8A51008965FD /* AddDataView.h */,
+				9BE1B0671F1F8A51008965FD /* AddDataView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -757,6 +762,7 @@
 				9B8DC1A71F1DFAB400EBD8D2 /* UIScrollView+MJExtension.m in Sources */,
 				9B8DC1A81F1DFAB400EBD8D2 /* UIScrollView+MJRefresh.m in Sources */,
 				9B8DC1471F1DE81F00EBD8D2 /* TabTwoViewController.m in Sources */,
+				9BE1B0681F1F8A51008965FD /* AddDataView.m in Sources */,
 				9B8DC1A01F1DFAB400EBD8D2 /* MJRefreshBackStateFooter.m in Sources */,
 				9B8DC19C1F1DFAB400EBD8D2 /* MJRefreshAutoNormalFooter.m in Sources */,
 				9B8DC12F1F1DE1F700EBD8D2 /* UIImageView+YYImage.m in Sources */,
