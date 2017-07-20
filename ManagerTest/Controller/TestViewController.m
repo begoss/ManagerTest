@@ -210,11 +210,16 @@
         return;
     }
     DLog(@"dic:%@",self.delDic);
+    NSInteger count = self.delDic.count;
     for (int i=0; i<self.dataArray.count; i++) {
         TestModelData *data = self.dataArray[i];
         if ([self.delDic objectForKey:[NSString stringWithFormat:@"%ld",data.id]]!=nil) {
             [self.dataArray removeObjectAtIndex:i];
             i--;
+            count--;
+        }
+        if (count == 0) {
+            break;
         }
     }
     [self.delDic removeAllObjects];

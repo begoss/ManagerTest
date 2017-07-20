@@ -74,6 +74,7 @@
     UIWindow *keywindow = [[UIApplication sharedApplication] keyWindow];
     [keywindow addSubview:self];
     self.baseView.frame = CGRectMake(SCREEN_WIDTH/4, SCREEN_HEIGHT+20, SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    self.alpha = 0;
     [UIView animateWithDuration:0.2 animations:^{
         self.baseView.frame = CGRectMake(SCREEN_WIDTH/4, SCREEN_HEIGHT/6, SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
         self.alpha = 1;
