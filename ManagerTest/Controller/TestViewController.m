@@ -229,14 +229,13 @@
 - (void)addDataAction {
     AddDataView *view = [[AddDataView alloc] initView];
     [view show];
-    WS(weakSelf);
     __weak typeof(view) weakView = view;
     [view setAddDataBlock:^(NSString *id,NSString *name,NSString *desc){
         BOOL isExisting = NO;
-        for (int i=0; i<weakSelf.dataArray.count; i++) {
-            TestModelData *data = weakSelf.dataArray[i];
+        for (int i=0; i<self.dataArray.count; i++) {
+            TestModelData *data = self.dataArray[i];
             if (data.id == [id integerValue]) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"id已存在" delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"id已存在" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 isExisting = YES;
                 return;
@@ -247,8 +246,8 @@
             addData.id = [id integerValue];
             addData.name = name;
             addData.desc = desc;
-            [weakSelf.dataArray addObject:addData];
-            [weakSelf.tableView reloadData];
+            [self.dataArray addObject:addData];
+            [self.tableView reloadData];
             [weakView hide];
         }
     }];
