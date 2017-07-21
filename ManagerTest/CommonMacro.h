@@ -14,6 +14,7 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define DEFULTTABBARHEIGHT 49
 #define TITLESECTION_HEIGHT 40
+#define SECTIONGAP 10
 
 //Color
 #define Color(R,G,B)   [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]

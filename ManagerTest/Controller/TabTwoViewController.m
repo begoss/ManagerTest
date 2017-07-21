@@ -7,8 +7,11 @@
 //
 
 #import "TabTwoViewController.h"
+#import "MyViewController.h"
 
 @interface TabTwoViewController ()
+
+@property (strong , nonatomic) UIButton *btn;
 
 @end
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"第二";
+    [self.view addSubview:self.btn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIButton *)btn{
+    if(!_btn){
+        _btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, 80, 40)];
+        _btn.backgroundColor = [UIColor blueColor];
+        [_btn setTitleColor:Color(100, 181, 246) forState:UIControlStateNormal];
+        [_btn setTitle:@"测试" forState:UIControlStateNormal];
+        [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _btn;
 }
-*/
+
+- (void)btnClick{
+    MyViewController *vc = [MyViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

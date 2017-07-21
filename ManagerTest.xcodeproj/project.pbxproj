@@ -63,6 +63,12 @@
 		9B8DC1BF1F1E14D700EBD8D2 /* TestFormHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DC1BE1F1E14D700EBD8D2 /* TestFormHead.m */; };
 		9B8DC1C21F1E14E900EBD8D2 /* TestFormDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DC1C11F1E14E900EBD8D2 /* TestFormDataCell.m */; };
 		9BE1B0681F1F8A51008965FD /* AddDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1B0671F1F8A51008965FD /* AddDataView.m */; };
+		F442A1DA1F21A417004D314E /* CellOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = F442A1D91F21A417004D314E /* CellOneView.m */; };
+		F4F27E211F20B5A400DB1BFA /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F27E201F20B5A400DB1BFA /* MyViewController.m */; };
+		F4F27E241F20B79200DB1BFA /* MainPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F27E231F20B79200DB1BFA /* MainPageModel.m */; };
+		F4F27E271F20B9DC00DB1BFA /* OneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F27E261F20B9DC00DB1BFA /* OneCell.m */; };
+		F4F27E2A1F20B9E900DB1BFA /* TwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F27E291F20B9E900DB1BFA /* TwoCell.m */; };
+		F4F27E2D1F20B9F400DB1BFA /* ThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F27E2C1F20B9F400DB1BFA /* ThreeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +205,18 @@
 		9BE1B0661F1F8A51008965FD /* AddDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDataView.h; sourceTree = "<group>"; };
 		9BE1B0671F1F8A51008965FD /* AddDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDataView.m; sourceTree = "<group>"; };
 		C628A483164348D6E1F8E1D9 /* libPods-ManagerTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManagerTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F442A1D81F21A417004D314E /* CellOneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOneView.h; sourceTree = "<group>"; };
+		F442A1D91F21A417004D314E /* CellOneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOneView.m; sourceTree = "<group>"; };
+		F4F27E1F1F20B5A400DB1BFA /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		F4F27E201F20B5A400DB1BFA /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		F4F27E221F20B79200DB1BFA /* MainPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageModel.h; sourceTree = "<group>"; };
+		F4F27E231F20B79200DB1BFA /* MainPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageModel.m; sourceTree = "<group>"; };
+		F4F27E251F20B9DC00DB1BFA /* OneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCell.h; sourceTree = "<group>"; };
+		F4F27E261F20B9DC00DB1BFA /* OneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCell.m; sourceTree = "<group>"; };
+		F4F27E281F20B9E900DB1BFA /* TwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoCell.h; sourceTree = "<group>"; };
+		F4F27E291F20B9E900DB1BFA /* TwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoCell.m; sourceTree = "<group>"; };
+		F4F27E2B1F20B9F400DB1BFA /* ThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeCell.h; sourceTree = "<group>"; };
+		F4F27E2C1F20B9F400DB1BFA /* ThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +360,8 @@
 				9B8DC1491F1DE83800EBD8D2 /* TabThreeViewController.m */,
 				9B8DC1611F1DF2E400EBD8D2 /* TestViewController.h */,
 				9B8DC1621F1DF2E400EBD8D2 /* TestViewController.m */,
+				F4F27E1F1F20B5A400DB1BFA /* MyViewController.h */,
+				F4F27E201F20B5A400DB1BFA /* MyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +379,8 @@
 			children = (
 				9B8DC1BA1F1E138300EBD8D2 /* TestModel.h */,
 				9B8DC1BB1F1E138300EBD8D2 /* TestModel.m */,
+				F4F27E221F20B79200DB1BFA /* MainPageModel.h */,
+				F4F27E231F20B79200DB1BFA /* MainPageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +421,14 @@
 				9B8DC1C11F1E14E900EBD8D2 /* TestFormDataCell.m */,
 				9BE1B0661F1F8A51008965FD /* AddDataView.h */,
 				9BE1B0671F1F8A51008965FD /* AddDataView.m */,
+				F442A1D81F21A417004D314E /* CellOneView.h */,
+				F442A1D91F21A417004D314E /* CellOneView.m */,
+				F4F27E251F20B9DC00DB1BFA /* OneCell.h */,
+				F4F27E261F20B9DC00DB1BFA /* OneCell.m */,
+				F4F27E281F20B9E900DB1BFA /* TwoCell.h */,
+				F4F27E291F20B9E900DB1BFA /* TwoCell.m */,
+				F4F27E2B1F20B9F400DB1BFA /* ThreeCell.h */,
+				F4F27E2C1F20B9F400DB1BFA /* ThreeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -726,18 +756,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F27E2D1F20B9F400DB1BFA /* ThreeCell.m in Sources */,
 				9B8DC1301F1DE1F700EBD8D2 /* UIView+HUD.m in Sources */,
 				9B8DC1A41F1DFAB400EBD8D2 /* MJRefreshStateHeader.m in Sources */,
 				9B8DC14E1F1DEB5600EBD8D2 /* BaseNetWorkViewController.m in Sources */,
 				9B8DC19D1F1DFAB400EBD8D2 /* MJRefreshAutoStateFooter.m in Sources */,
 				9B8DC1A21F1DFAB400EBD8D2 /* MJRefreshGifHeader.m in Sources */,
+				F4F27E241F20B79200DB1BFA /* MainPageModel.m in Sources */,
 				9B8DC15D1F1DEF4200EBD8D2 /* SSKeychain.m in Sources */,
 				9B8DC14A1F1DE83800EBD8D2 /* TabThreeViewController.m in Sources */,
 				9B8DC19F1F1DFAB400EBD8D2 /* MJRefreshBackNormalFooter.m in Sources */,
 				9B8DC1541F1DEE9E00EBD8D2 /* HttpTool.m in Sources */,
 				9B8DC1341F1DE50D00EBD8D2 /* BaseNavigationController.m in Sources */,
 				9B8DC1971F1DFAB400EBD8D2 /* MJRefreshBackFooter.m in Sources */,
+				F442A1DA1F21A417004D314E /* CellOneView.m in Sources */,
+				F4F27E271F20B9DC00DB1BFA /* OneCell.m in Sources */,
 				9B8DC1661F1DFA6500EBD8D2 /* BaseTableViewController.m in Sources */,
+				F4F27E211F20B5A400DB1BFA /* MyViewController.m in Sources */,
 				9B8DC1A91F1DFAB400EBD8D2 /* UIView+MJExtension.m in Sources */,
 				9B8DC19E1F1DFAB400EBD8D2 /* MJRefreshBackGifFooter.m in Sources */,
 				9B8DC15A1F1DEF0100EBD8D2 /* SystemInformation.m in Sources */,
@@ -747,6 +782,7 @@
 				9B8DC1631F1DF2E400EBD8D2 /* TestViewController.m in Sources */,
 				9B8DC1981F1DFAB400EBD8D2 /* MJRefreshComponent.m in Sources */,
 				9B8DC1AC1F1DFBEF00EBD8D2 /* UIScrollView+Refresh.m in Sources */,
+				F4F27E2A1F20B9E900DB1BFA /* TwoCell.m in Sources */,
 				9B8DC1B61F1E0CA200EBD8D2 /* UITableViewCell+SelectedColor.m in Sources */,
 				9B8DC19A1F1DFAB400EBD8D2 /* MJRefreshHeader.m in Sources */,
 				9B8DC1A31F1DFAB400EBD8D2 /* MJRefreshNormalHeader.m in Sources */,
